@@ -42,6 +42,8 @@ GEM
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    addressable (2.5.2)
+      public_suffix (>= 2.0.2, < 4.0)
     arel (9.0.0)
     bootsnap (1.3.1)
       msgpack (~> 1.0)
@@ -71,8 +73,11 @@ GEM
     nokogiri (1.8.4-x64-mingw32)
       mini_portile2 (~> 2.3.0)
     pg (1.0.0-x64-mingw32)
+    public_suffix (3.0.2)
     puma (3.12.0)
     rack (2.0.5)
+    rack-proxy (0.6.4)
+      rack
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (5.2.0)
@@ -93,6 +98,11 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.0.4)
       loofah (~> 2.2, >= 2.2.2)
+    rails-reverse-proxy (0.9.1)
+      addressable
+      rack
+      rack-proxy
+      rails
     railties (5.2.0)
       actionpack (= 5.2.0)
       activesupport (= 5.2.0)
@@ -126,6 +136,7 @@ DEPENDENCIES
   pg (>= 0.18, < 2.0)
   puma (~> 3.11)
   rails (~> 5.2.0)
+  rails-reverse-proxy
   tzinfo-data
 
 RUBY VERSION
